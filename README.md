@@ -118,17 +118,23 @@ If you run localaly :
 If you run on server :
 ----------------------
 
-`   First i build the application by right clicking on project run as -> maven build  after build the project a jar or war file come
-	into the target folder and then upload this jar on a folder of specific server then copy then open the putty for specific server
+`       First you need to build the application by right-clicking on the project and running it as a Maven build. After building the project, a jar or war file comes into the target folder.
 
-	and first in this we copy the jar file in specific location and then execute supervisorctl command and after then write command for
-	restart the project like restart and project name and then 
-	we see the current log that application start or not or any exception come or not by tail -f log folder name and log file name.
+	And then upload this jar to a folder on a specific server, then copy it, and after then open the Linux terminal or the putty for the specific 
+
+	server, and first in this we copy the jar file to a specific location and then execute the supervisorctl command, and after then write the command to restart the project, like restart and 
+        project name, and then we need to see the current log to check the application starts or not by tailing the log.
+
+	Here some below command which is use to run the project :
+
 	
-	cp /home/development/agent-services.jar 
-	supervisorctl
-	restart agent-services
-	tail -f /var/log/trace/agent-services.log
+	cp /home/development/agent-services.jar : cp command is use to copy the project's jar file server location
+	 
+	supervisorctl : supervisorctl commannd is allows you to start, stop, restart, and monitor processes as services.
+
+	restart agent-services : restart command is used to restart the project.
+ 
+	tail -f /var/log/trace/agent-services.log : tail -f command is used to see the live log.
 
 
  
